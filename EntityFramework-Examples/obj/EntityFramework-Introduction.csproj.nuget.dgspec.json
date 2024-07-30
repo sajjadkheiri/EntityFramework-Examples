@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "G:\\Learn\\.Net 6\\Repos\\EntityFramework-Examples\\EntityFramework-Examples\\EntityFramework-Examples.csproj": {}
+    "G:\\Learn\\.Net 6\\Repos\\EntityFramework-Examples\\EntityFramework-Examples\\EntityFramework-Introduction.csproj": {}
   },
   "projects": {
-    "G:\\Learn\\.Net 6\\Repos\\EntityFramework-Examples\\EntityFramework-Examples\\EntityFramework-Examples.csproj": {
+    "G:\\Learn\\.Net 6\\Repos\\EntityFramework-Examples\\EntityFramework-Examples\\EntityFramework-Introduction.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\Learn\\.Net 6\\Repos\\EntityFramework-Examples\\EntityFramework-Examples\\EntityFramework-Examples.csproj",
-        "projectName": "EntityFramework-Examples",
-        "projectPath": "G:\\Learn\\.Net 6\\Repos\\EntityFramework-Examples\\EntityFramework-Examples\\EntityFramework-Examples.csproj",
+        "projectUniqueName": "G:\\Learn\\.Net 6\\Repos\\EntityFramework-Examples\\EntityFramework-Examples\\EntityFramework-Introduction.csproj",
+        "projectName": "EntityFramework-Introduction",
+        "projectPath": "G:\\Learn\\.Net 6\\Repos\\EntityFramework-Examples\\EntityFramework-Examples\\EntityFramework-Introduction.csproj",
         "packagesPath": "C:\\Users\\S.Kheyrizadeh\\.nuget\\packages\\",
         "outputPath": "G:\\Learn\\.Net 6\\Repos\\EntityFramework-Examples\\EntityFramework-Examples\\obj\\",
         "projectStyle": "PackageReference",
