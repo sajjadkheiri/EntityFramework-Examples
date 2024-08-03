@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "d:\\Repo\\sajjadkheiri\\EntityFramework-Examples\\EntityFramework.Introduction\\EntityFramework.Introduction.csproj": {}
+    "D:\\Repo\\sajjadkheiri\\EntityFramework-Examples\\EntityFramework.Introduction\\EntityFramework.Introduction.csproj": {}
   },
   "projects": {
-    "d:\\Repo\\sajjadkheiri\\EntityFramework-Examples\\EntityFramework.Introduction\\EntityFramework.Introduction.csproj": {
+    "D:\\Repo\\sajjadkheiri\\EntityFramework-Examples\\EntityFramework.Introduction\\EntityFramework.Introduction.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\Repo\\sajjadkheiri\\EntityFramework-Examples\\EntityFramework.Introduction\\EntityFramework.Introduction.csproj",
+        "projectUniqueName": "D:\\Repo\\sajjadkheiri\\EntityFramework-Examples\\EntityFramework.Introduction\\EntityFramework.Introduction.csproj",
         "projectName": "EntityFramework.Introduction",
-        "projectPath": "d:\\Repo\\sajjadkheiri\\EntityFramework-Examples\\EntityFramework.Introduction\\EntityFramework.Introduction.csproj",
+        "projectPath": "D:\\Repo\\sajjadkheiri\\EntityFramework-Examples\\EntityFramework.Introduction\\EntityFramework.Introduction.csproj",
         "packagesPath": "C:\\Users\\Sajjad\\.nuget\\packages\\",
-        "outputPath": "d:\\Repo\\sajjadkheiri\\EntityFramework-Examples\\EntityFramework.Introduction\\obj\\",
+        "outputPath": "D:\\Repo\\sajjadkheiri\\EntityFramework-Examples\\EntityFramework.Introduction\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

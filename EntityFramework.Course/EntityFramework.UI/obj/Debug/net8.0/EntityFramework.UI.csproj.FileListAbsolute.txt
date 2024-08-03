@@ -1,0 +1,15 @@
+D:\Repo\sajjadkheiri\EntityFramework-Examples\EntityFramework.Course\EntityFramework.UI\bin\Debug\net8.0\EntityFramework.UI.exe
+D:\Repo\sajjadkheiri\EntityFramework-Examples\EntityFramework.Course\EntityFramework.UI\bin\Debug\net8.0\EntityFramework.UI.deps.json
+D:\Repo\sajjadkheiri\EntityFramework-Examples\EntityFramework.Course\EntityFramework.UI\bin\Debug\net8.0\EntityFramework.UI.runtimeconfig.json
+D:\Repo\sajjadkheiri\EntityFramework-Examples\EntityFramework.Course\EntityFramework.UI\bin\Debug\net8.0\EntityFramework.UI.dll
+D:\Repo\sajjadkheiri\EntityFramework-Examples\EntityFramework.Course\EntityFramework.UI\bin\Debug\net8.0\EntityFramework.UI.pdb
+D:\Repo\sajjadkheiri\EntityFramework-Examples\EntityFramework.Course\EntityFramework.UI\obj\Debug\net8.0\EntityFramework.UI.GeneratedMSBuildEditorConfig.editorconfig
+D:\Repo\sajjadkheiri\EntityFramework-Examples\EntityFramework.Course\EntityFramework.UI\obj\Debug\net8.0\EntityFramework.UI.AssemblyInfoInputs.cache
+D:\Repo\sajjadkheiri\EntityFramework-Examples\EntityFramework.Course\EntityFramework.UI\obj\Debug\net8.0\EntityFramework.UI.AssemblyInfo.cs
+D:\Repo\sajjadkheiri\EntityFramework-Examples\EntityFramework.Course\EntityFramework.UI\obj\Debug\net8.0\EntityFramework.UI.csproj.CoreCompileInputs.cache
+D:\Repo\sajjadkheiri\EntityFramework-Examples\EntityFramework.Course\EntityFramework.UI\obj\Debug\net8.0\EntityFramework.UI.sourcelink.json
+D:\Repo\sajjadkheiri\EntityFramework-Examples\EntityFramework.Course\EntityFramework.UI\obj\Debug\net8.0\EntityFramework.UI.dll
+D:\Repo\sajjadkheiri\EntityFramework-Examples\EntityFramework.Course\EntityFramework.UI\obj\Debug\net8.0\refint\EntityFramework.UI.dll
+D:\Repo\sajjadkheiri\EntityFramework-Examples\EntityFramework.Course\EntityFramework.UI\obj\Debug\net8.0\EntityFramework.UI.pdb
+D:\Repo\sajjadkheiri\EntityFramework-Examples\EntityFramework.Course\EntityFramework.UI\obj\Debug\net8.0\EntityFramework.UI.genruntimeconfig.cache
+D:\Repo\sajjadkheiri\EntityFramework-Examples\EntityFramework.Course\EntityFramework.UI\obj\Debug\net8.0\ref\EntityFramework.UI.dll
