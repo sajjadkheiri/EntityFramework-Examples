@@ -1,0 +1,15 @@
+G:\Learn\.Net 6\Repos\EntityFramework-Examples\EF.Course\EF.DataAccess\bin\Debug\net8.0\EF.DataAccess.deps.json
+G:\Learn\.Net 6\Repos\EntityFramework-Examples\EF.Course\EF.DataAccess\bin\Debug\net8.0\EF.DataAccess.runtimeconfig.json
+G:\Learn\.Net 6\Repos\EntityFramework-Examples\EF.Course\EF.DataAccess\bin\Debug\net8.0\EF.DataAccess.dll
+G:\Learn\.Net 6\Repos\EntityFramework-Examples\EF.Course\EF.DataAccess\bin\Debug\net8.0\EF.DataAccess.pdb
+G:\Learn\.Net 6\Repos\EntityFramework-Examples\EF.Course\EF.DataAccess\obj\Debug\net8.0\EF.DataAccess.csproj.AssemblyReference.cache
+G:\Learn\.Net 6\Repos\EntityFramework-Examples\EF.Course\EF.DataAccess\obj\Debug\net8.0\EF.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+G:\Learn\.Net 6\Repos\EntityFramework-Examples\EF.Course\EF.DataAccess\obj\Debug\net8.0\EF.DataAccess.AssemblyInfoInputs.cache
+G:\Learn\.Net 6\Repos\EntityFramework-Examples\EF.Course\EF.DataAccess\obj\Debug\net8.0\EF.DataAccess.AssemblyInfo.cs
+G:\Learn\.Net 6\Repos\EntityFramework-Examples\EF.Course\EF.DataAccess\obj\Debug\net8.0\EF.DataAccess.csproj.CoreCompileInputs.cache
+G:\Learn\.Net 6\Repos\EntityFramework-Examples\EF.Course\EF.DataAccess\obj\Debug\net8.0\EF.DataAccess.sourcelink.json
+G:\Learn\.Net 6\Repos\EntityFramework-Examples\EF.Course\EF.DataAccess\obj\Debug\net8.0\EF.DataAccess.dll
+G:\Learn\.Net 6\Repos\EntityFramework-Examples\EF.Course\EF.DataAccess\obj\Debug\net8.0\refint\EF.DataAccess.dll
+G:\Learn\.Net 6\Repos\EntityFramework-Examples\EF.Course\EF.DataAccess\obj\Debug\net8.0\EF.DataAccess.pdb
+G:\Learn\.Net 6\Repos\EntityFramework-Examples\EF.Course\EF.DataAccess\obj\Debug\net8.0\EF.DataAccess.genruntimeconfig.cache
+G:\Learn\.Net 6\Repos\EntityFramework-Examples\EF.Course\EF.DataAccess\obj\Debug\net8.0\ref\EF.DataAccess.dll

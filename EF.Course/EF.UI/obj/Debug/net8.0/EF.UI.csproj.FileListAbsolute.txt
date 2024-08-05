@@ -1,0 +1,15 @@
+G:\Learn\.Net 6\Repos\EntityFramework-Examples\EF.Course\EF.UI\bin\Debug\net8.0\EF.UI.exe
+G:\Learn\.Net 6\Repos\EntityFramework-Examples\EF.Course\EF.UI\bin\Debug\net8.0\EF.UI.deps.json
+G:\Learn\.Net 6\Repos\EntityFramework-Examples\EF.Course\EF.UI\bin\Debug\net8.0\EF.UI.runtimeconfig.json
+G:\Learn\.Net 6\Repos\EntityFramework-Examples\EF.Course\EF.UI\bin\Debug\net8.0\EF.UI.dll
+G:\Learn\.Net 6\Repos\EntityFramework-Examples\EF.Course\EF.UI\bin\Debug\net8.0\EF.UI.pdb
+G:\Learn\.Net 6\Repos\EntityFramework-Examples\EF.Course\EF.UI\obj\Debug\net8.0\EF.UI.GeneratedMSBuildEditorConfig.editorconfig
+G:\Learn\.Net 6\Repos\EntityFramework-Examples\EF.Course\EF.UI\obj\Debug\net8.0\EF.UI.AssemblyInfoInputs.cache
+G:\Learn\.Net 6\Repos\EntityFramework-Examples\EF.Course\EF.UI\obj\Debug\net8.0\EF.UI.AssemblyInfo.cs
+G:\Learn\.Net 6\Repos\EntityFramework-Examples\EF.Course\EF.UI\obj\Debug\net8.0\EF.UI.csproj.CoreCompileInputs.cache
+G:\Learn\.Net 6\Repos\EntityFramework-Examples\EF.Course\EF.UI\obj\Debug\net8.0\EF.UI.sourcelink.json
+G:\Learn\.Net 6\Repos\EntityFramework-Examples\EF.Course\EF.UI\obj\Debug\net8.0\EF.UI.dll
+G:\Learn\.Net 6\Repos\EntityFramework-Examples\EF.Course\EF.UI\obj\Debug\net8.0\refint\EF.UI.dll
+G:\Learn\.Net 6\Repos\EntityFramework-Examples\EF.Course\EF.UI\obj\Debug\net8.0\EF.UI.pdb
+G:\Learn\.Net 6\Repos\EntityFramework-Examples\EF.Course\EF.UI\obj\Debug\net8.0\EF.UI.genruntimeconfig.cache
+G:\Learn\.Net 6\Repos\EntityFramework-Examples\EF.Course\EF.UI\obj\Debug\net8.0\ref\EF.UI.dll
