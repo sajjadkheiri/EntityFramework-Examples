@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "G:\\Learn\\.Net 6\\Repos\\EntityFramework-Examples\\EF.Course\\EF.DataAccess\\EF.DataAccess.csproj": {}
+    "G:\\Learn\\.Net 6\\Repos\\EntityFramework-Examples\\EF.Course\\EF.Entity\\EF.Entity.csproj": {}
   },
   "projects": {
-    "G:\\Learn\\.Net 6\\Repos\\EntityFramework-Examples\\EF.Course\\EF.DataAccess\\EF.DataAccess.csproj": {
+    "G:\\Learn\\.Net 6\\Repos\\EntityFramework-Examples\\EF.Course\\EF.Entity\\EF.Entity.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\Learn\\.Net 6\\Repos\\EntityFramework-Examples\\EF.Course\\EF.DataAccess\\EF.DataAccess.csproj",
-        "projectName": "EF.DataAccess",
-        "projectPath": "G:\\Learn\\.Net 6\\Repos\\EntityFramework-Examples\\EF.Course\\EF.DataAccess\\EF.DataAccess.csproj",
+        "projectUniqueName": "G:\\Learn\\.Net 6\\Repos\\EntityFramework-Examples\\EF.Course\\EF.Entity\\EF.Entity.csproj",
+        "projectName": "EF.Entity",
+        "projectPath": "G:\\Learn\\.Net 6\\Repos\\EntityFramework-Examples\\EF.Course\\EF.Entity\\EF.Entity.csproj",
         "packagesPath": "C:\\Users\\S.Kheyrizadeh\\.nuget\\packages\\",
-        "outputPath": "G:\\Learn\\.Net 6\\Repos\\EntityFramework-Examples\\EF.Course\\EF.DataAccess\\obj\\",
+        "outputPath": "G:\\Learn\\.Net 6\\Repos\\EntityFramework-Examples\\EF.Course\\EF.Entity\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -34,11 +34,7 @@
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
-            "projectReferences": {
-              "G:\\Learn\\.Net 6\\Repos\\EntityFramework-Examples\\EF.Course\\EF.Entity\\EF.Entity.csproj": {
-                "projectPath": "G:\\Learn\\.Net 6\\Repos\\EntityFramework-Examples\\EF.Course\\EF.Entity\\EF.Entity.csproj"
-              }
-            }
+            "projectReferences": {}
           }
         },
         "warningProperties": {
@@ -55,18 +51,6 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "dependencies": {
-            "Microsoft.EntityFrameworkCore.SqlServer": {
-              "target": "Package",
-              "version": "[8.0.7, )"
-            },
-            "Microsoft.EntityFrameworkCore.Tools": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[8.0.7, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",

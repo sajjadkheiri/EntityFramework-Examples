@@ -7,4 +7,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+    <ItemGroup>
+    <ProjectReference Include="..\EF.Entity\EF.Entity.csproj" />
+    <ProjectReference Include="..\EF.DataAccess\EF.DataAccess.csproj" />
+  </ItemGroup>
+
 </Project>

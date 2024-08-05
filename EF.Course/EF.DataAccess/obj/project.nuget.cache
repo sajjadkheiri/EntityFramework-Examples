@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "dgSpecHash": "N4wLC6gGAaU=",
-  "success": true,
+  "dgSpecHash": "eedj0UmEqiA=",
+  "success": false,
   "projectFilePath": "G:\\Learn\\.Net 6\\Repos\\EntityFramework-Examples\\EF.Course\\EF.DataAccess\\EF.DataAccess.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\S.Kheyrizadeh\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
@@ -81,5 +81,15 @@
     "C:\\Users\\S.Kheyrizadeh\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
     "C:\\Users\\S.Kheyrizadeh\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1105",
+      "level": "Error",
+      "message": "Unable to find project information for 'G:\\Learn\\.Net 6\\Repos\\EntityFramework-Examples\\EF.Course\\EF.Entity\\EF.Entity.csproj'. If you are using Visual Studio, this may be because the project is unloaded or not part of the current solution so run a restore from the command-line. Otherwise, the project file may be invalid or missing targets required for restore.",
+      "libraryId": "G:\\Learn\\.Net 6\\Repos\\EntityFramework-Examples\\EF.Course\\EF.Entity\\EF.Entity.csproj",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    }
+  ]
 }

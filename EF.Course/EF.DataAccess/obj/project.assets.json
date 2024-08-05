@@ -4099,6 +4099,7 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
+      "G:\\Learn\\.Net 6\\Repos\\EntityFramework-Examples\\EF.Course\\EF.Entity\\EF.Entity.csproj",
       "Microsoft.EntityFrameworkCore.SqlServer >= 8.0.7",
       "Microsoft.EntityFrameworkCore.Tools >= 8.0.7"
     ]
@@ -4138,7 +4139,11 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "G:\\Learn\\.Net 6\\Repos\\EntityFramework-Examples\\EF.Course\\EF.Entity\\EF.Entity.csproj": {
+              "projectPath": "G:\\Learn\\.Net 6\\Repos\\EntityFramework-Examples\\EF.Course\\EF.Entity\\EF.Entity.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -4186,5 +4191,16 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1105",
+      "level": "Error",
+      "message": "Unable to find project information for 'G:\\Learn\\.Net 6\\Repos\\EntityFramework-Examples\\EF.Course\\EF.Entity\\EF.Entity.csproj'. If you are using Visual Studio, this may be because the project is unloaded or not part of the current solution so run a restore from the command-line. Otherwise, the project file may be invalid or missing targets required for restore.",
+      "libraryId": "G:\\Learn\\.Net 6\\Repos\\EntityFramework-Examples\\EF.Course\\EF.Entity\\EF.Entity.csproj",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    }
+  ]
 }
