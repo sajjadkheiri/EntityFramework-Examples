@@ -16,7 +16,7 @@ public class CourseStoreRepository
     /// Tip : Eager loading in EF Core is similar to that in EF6.x, but EF6.x doesn’t have a ThenInclude method.
     /// As a result, the Include/ThenInclude code used in listing 2.4 would be written in EF6.x as below code
     /// </summary>
-    public List<Course> GetCourseAndTeacher()
+    public List<Course> GetCourseAndTeacherEager()
     {
         var result = _dbContext.Courses.Include(x => x.CourseTeachers.Select(y => y.Teacher))
                                        //.ThenInclude(x => x.Teacher)
@@ -25,7 +25,7 @@ public class CourseStoreRepository
         return result;
     }
 
-    public List<Course> GetCourseAndTeacherAndTag()
+    public List<Course> GetCourseAndTeacherAndTagEager()
     {
         var result = _dbContext.Courses.Include(x => x.CourseTeachers).ThenInclude(x => x.Teacher)
                                        .Include(x => x.Tags)

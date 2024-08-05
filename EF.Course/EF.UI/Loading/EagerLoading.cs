@@ -7,6 +7,7 @@ public class EagerLoading
     private readonly CourseStoreRepository _repository;
 
     /// <summary>
+    /// You can load all of data with relationships
     /// Tip : You have to remember to call .Include() to query related entities. If you forget to do this, your code will keep working
     /// </summary>
     public EagerLoading(CourseStoreRepository repository)
@@ -22,7 +23,7 @@ public class EagerLoading
 
     public void PrintCourseAndTeacher()
     {
-        var courses = _repository.GetCourseAndTeacher();
+        var courses = _repository.GetCourseAndTeacherEager();
 
         foreach (var course in courses)
         {
@@ -37,7 +38,7 @@ public class EagerLoading
 
     public void PrintCourseAndTeacherAndTag()
     {
-        var courses = _repository.GetCourseAndTeacher();
+        var courses = _repository.GetCourseAndTeacherEager();
 
         foreach (var course in courses)
         {
