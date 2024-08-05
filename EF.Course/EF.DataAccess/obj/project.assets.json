@@ -1502,6 +1502,16 @@
             "rid": "win"
           }
         }
+      },
+      "EF.Entity/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/EF.Entity.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EF.Entity.dll": {}
+        }
       }
     }
   },
@@ -4095,35 +4105,38 @@
         "system.windows.extensions.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "EF.Entity/1.0.0": {
+      "type": "project",
+      "path": "../EF.Entity/EF.Entity.csproj",
+      "msbuildProject": "../EF.Entity/EF.Entity.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
-      "G:\\Learn\\.Net 6\\Repos\\EntityFramework-Examples\\EF.Course\\EF.Entity\\EF.Entity.csproj",
+      "EF.Entity >= 1.0.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 8.0.7",
       "Microsoft.EntityFrameworkCore.Tools >= 8.0.7"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\S.Kheyrizadeh\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\Sajjad\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "G:\\Learn\\.Net 6\\Repos\\EntityFramework-Examples\\EF.Course\\EF.DataAccess\\EF.DataAccess.csproj",
+      "projectUniqueName": "D:\\Repo\\sajjadkheiri\\EntityFramework-Examples\\EF.Course\\EF.DataAccess\\EF.DataAccess.csproj",
       "projectName": "EF.DataAccess",
-      "projectPath": "G:\\Learn\\.Net 6\\Repos\\EntityFramework-Examples\\EF.Course\\EF.DataAccess\\EF.DataAccess.csproj",
-      "packagesPath": "C:\\Users\\S.Kheyrizadeh\\.nuget\\packages\\",
-      "outputPath": "G:\\Learn\\.Net 6\\Repos\\EntityFramework-Examples\\EF.Course\\EF.DataAccess\\obj\\",
+      "projectPath": "D:\\Repo\\sajjadkheiri\\EntityFramework-Examples\\EF.Course\\EF.DataAccess\\EF.DataAccess.csproj",
+      "packagesPath": "C:\\Users\\Sajjad\\.nuget\\packages\\",
+      "outputPath": "D:\\Repo\\sajjadkheiri\\EntityFramework-Examples\\EF.Course\\EF.DataAccess\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\S.Kheyrizadeh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Sajjad\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -4132,16 +4145,14 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
-        "https://api.nuget.org/v3/index.json": {},
-        "https://devops.etadbir.com/tfs/C_Tadbir/_packaging/Feed.SoftwareInfrastructure%40Local/nuget/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "G:\\Learn\\.Net 6\\Repos\\EntityFramework-Examples\\EF.Course\\EF.Entity\\EF.Entity.csproj": {
-              "projectPath": "G:\\Learn\\.Net 6\\Repos\\EntityFramework-Examples\\EF.Course\\EF.Entity\\EF.Entity.csproj"
+            "D:\\Repo\\sajjadkheiri\\EntityFramework-Examples\\EF.Course\\EF.Entity\\EF.Entity.csproj": {
+              "projectPath": "D:\\Repo\\sajjadkheiri\\EntityFramework-Examples\\EF.Course\\EF.Entity\\EF.Entity.csproj"
             }
           }
         }
@@ -4188,19 +4199,8 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1105",
-      "level": "Error",
-      "message": "Unable to find project information for 'G:\\Learn\\.Net 6\\Repos\\EntityFramework-Examples\\EF.Course\\EF.Entity\\EF.Entity.csproj'. If you are using Visual Studio, this may be because the project is unloaded or not part of the current solution so run a restore from the command-line. Otherwise, the project file may be invalid or missing targets required for restore.",
-      "libraryId": "G:\\Learn\\.Net 6\\Repos\\EntityFramework-Examples\\EF.Course\\EF.Entity\\EF.Entity.csproj",
-      "targetGraphs": [
-        "net8.0"
-      ]
-    }
-  ]
+  }
 }
