@@ -33,4 +33,25 @@ public class CourseStoreRepository
 
         return result;
     }
+
+    /// <summary>
+    /// Collection :  tracking and loading information for a collection
+    /// Reference : tracking and loading information for a reference
+    /// </summary>
+    public List<Course> GetCourseAndTeacherExplicit()
+    {
+        var courses = _dbContext.Courses.ToList();
+
+        foreach (var course in courses)
+        {
+            _dbContext.Entry(course).Collection(x => x.CourseTeachers).Load();
+
+            foreach (var courseTeacher in course.CourseTeachers)
+            {
+                _dbContext.Entry(courseTeacher).Reference(x => x.Teacher).Load();
+            }
+        }
+
+        return courses;
+    }
 }
