@@ -1,4 +1,5 @@
 ﻿using EF.Entities;
+using EF.Entity;
 using Microsoft.EntityFrameworkCore;
 
 namespace EF.DataAccess;
@@ -53,5 +54,16 @@ public class CourseStoreRepository
         }
 
         return courses;
+    }
+
+    public List<CourseInfoOutputDto> GetCourseInfoSelect()
+    {
+        var course = _dbContext.Courses.Select(x => new CourseInfoOutputDto
+        {
+            Id = x.Id,
+            Name = x.Name
+        }).ToList();
+
+        return course;
     }
 }

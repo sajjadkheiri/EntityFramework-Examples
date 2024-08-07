@@ -15,3 +15,19 @@ EagerLoading eagerLoading = new(courseStoreRepository);
 eagerLoading.Run();
 
 #endregion
+
+#region Explicit Loading
+
+ExplicitLoading explicitLoading = new(courseStoreRepository);
+
+explicitLoading.Run();
+
+#endregion
+
+#region Select Loading
+
+SelectLoading selectLoading = new(courseStoreRepository);
+
+selectLoading.Run();
+
+#endregion
