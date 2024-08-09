@@ -66,4 +66,22 @@ public class CourseStoreRepository
 
         return course;
     }
+
+    /// <summary>
+    ///It allows you to run code at the last stage of the query that can’t be converted to database commands
+    ///Tip : If your LINQ queries can’t be converted to database commands, EF Core will throw an "InvalidOperationException", 
+    ///with a message containing "the words could not be translated".
+    /// </summary>
+    public IQueryable<Course> GetCourseTagsClientVsServer()
+    {
+        var course = _dbContext.Courses.Include(x => x.Tags)
+                                       .Select(x => new Course
+                                       {
+                                           Id = x.Id,
+                                           Name = x.Name,
+                                           Description = string.Join(',', x.Tags)
+                                       });
+
+        return course;
+    }
 }
