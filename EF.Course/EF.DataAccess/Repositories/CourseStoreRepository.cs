@@ -84,4 +84,15 @@ public class CourseStoreRepository
 
         return course;
     }
+
+    /// <summary>
+    /// OrderBy / OrderByDesc / ThenBy / ThenByDesc
+    /// You just can use OrderBy / OrderByDesc in the first stage, after that if you want to do filter again
+    /// you must use ThenBy / ThenByDesc
+    /// Tip : If you use OrderBy / OrderByDesc after first stage, all data was filterd will destroyed
+    /// </summary>
+    public void GetCourseSortedData()
+    {
+        var result = _dbContext.Tags.OrderBy(x => x.Name);
+    }
 }
