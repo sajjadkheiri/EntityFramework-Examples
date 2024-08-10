@@ -93,6 +93,27 @@ public class CourseStoreRepository
     /// </summary>
     public void GetCourseSortedData()
     {
-        var result = _dbContext.Tags.OrderBy(x => x.Name);
+        var result = _dbContext.Tags.OrderBy(x => x.Name)
+                                    .ToList();
+    }
+
+    public List<Course> FilterdCourseByLike()
+    {
+        var result = _dbContext.Courses.Where(x => Microsoft.EntityFrameworkCore.EF.Functions.Like(x.Name, "a%"))
+                                       .ToList();
+
+        return result;
+    }
+
+    /// <summary>
+    /// Take / Skip
+    /// </summary>
+    public List<Course> GetCourseWithPaging()
+    {
+        var result = _dbContext.Courses.Skip(2)
+                                       .Take(5)
+                                       .ToList();
+
+        return result;
     }
 }
