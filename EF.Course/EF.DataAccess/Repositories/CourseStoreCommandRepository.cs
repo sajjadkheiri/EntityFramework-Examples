@@ -33,15 +33,15 @@ public class CourseStoreCommandRepository
     {
         Course course = new()
         {
-            Name = "",
-            Price = ,
+            Name = "Docker course",
+            Price = 1000000,
             DateTime = DateTime.Now,
-            Description = "",
-            Comments = new()
+            Description = "Full course",
+            Comments = new List<Comment>()
             {
-                new Comment{
-                    CommentText = "",
-                    CommentBy = "",
+                new() {
+                    CommentText = "This is perfect",
+                    CommentBy = "s.kheiri",
                     IsApproved = true,
                     StarCount = 5
                 }
