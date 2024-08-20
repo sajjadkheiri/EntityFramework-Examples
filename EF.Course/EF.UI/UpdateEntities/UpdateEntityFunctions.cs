@@ -11,7 +11,7 @@ public class UpdateEntityFunctions
     private UpdateEntityFunctions()
     {
         var optionBuilder = new DbContextOptionsBuilder<CourseDbContext>();
-        optionBuilder.UseSqlServer("Server =.;Database=CourseDb;User Id=sa;Password=Str0ngPa$$w0rd;TrustServerCertificate=True");
+        optionBuilder.UseSqlServer("Server =.;Database=CourseDb;User Id=sa;Password=1qaz@WSX;TrustServerCertificate=True");
 
         _dbContext = new CourseDbContext(optionBuilder.Options);
         _repository = new CourseStoreCommandRepository(_dbContext);

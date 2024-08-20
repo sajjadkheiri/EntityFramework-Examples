@@ -3,7 +3,7 @@ using EF.UI;
 using Microsoft.EntityFrameworkCore;
 
 var optionsBuilder = new DbContextOptionsBuilder<CourseDbContext>();
-optionsBuilder.UseSqlServer("Server =.;Database=CourseDb;User Id=sa;Password=Str0ngPa$$w0rd;TrustServerCertificate=True");
+optionsBuilder.UseSqlServer("Server =.;Database=CourseDb;User Id=sa;Password=1qaz@WSX;TrustServerCertificate=True");
 
 CourseDbContext courseDbContext = new(optionsBuilder.Options);
 CourseStoreRepository courseStoreRepository = new(courseDbContext);

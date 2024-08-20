@@ -8,6 +8,6 @@ public class PersonDbContex : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.UseSqlServer("Server=.; Initial catalog=EFTest;User Id=sa;Password=Str0ngPa$$w0rd;TrustServerCertificate=True");
+        optionsBuilder.UseSqlServer("Server=.; Initial catalog=EFTest;User Id=sa;Password=1qaz@WSX;TrustServerCertificate=True");
     }
 }
