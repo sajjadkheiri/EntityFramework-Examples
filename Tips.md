@@ -2,7 +2,8 @@
 
 ### what's difference between Find() and FirstOrDefualt()?
 
-#####
+##### First of all, Find() tries to read from DbContex like a cache. If it could not be able to fetch data
+##### go to the database.However, FirstOrDefualt() directly go to the database without any cache
 
 ### what's difference between SingleOrDefualt() and FirstOrDefualt()?
 
