@@ -117,24 +117,22 @@ public class CourseStoreRepository
         return result;
     }
 
-    /// <summary>
-    /// When an entity has relation to other entities, this help you to get
-    /// dependent data.However, AsNoTracking has a great efficiency because
-    /// doesn't get dependent data.
-    /// </summary>
-    public Comment GetCommentsByRelationalFixup(int courseId)
+    public List<Course> GetWithAsNoTracking()
     {
-        var result = _dbContext.Comments.Where(x => x.Course.Id == courseId)
-                                  .SingleOrDefault();
+        var result = _dbContext.Courses.AsNoTracking()
+                                       .Include(x => x.CourseTeachers)
+                                       .ThenInclude(x => x.Teacher)
+                                       .ToList();
 
         return result;
     }
 
-    public Comment GetCommentsByAsNoTracking(int courseId)
+    public List<Course> GetWithAsNoTrackingWithIdentityResolution()
     {
-        var result = _dbContext.Comments.AsNoTracking()
-                                        .Where(x => x.Course.Id == courseId)
-                                        .SingleOrDefault();
+        var result = _dbContext.Courses.AsNoTrackingWithIdentityResolution()
+                                       .Include(x => x.CourseTeachers)
+                                       .ThenInclude(x => x.Teacher)
+                                       .ToList();
 
         return result;
     }

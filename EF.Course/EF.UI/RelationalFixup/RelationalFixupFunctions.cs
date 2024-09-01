@@ -4,16 +4,16 @@ namespace EF.UI;
 
 public class RelationalFixupFunctions
 {
-    private readonly CourseStoreRepository _courseStoreRepository;
+    private readonly CommentRepository _commentRepository;
 
-    public RelationalFixupFunctions(CourseStoreRepository courseStoreRepository)
+    public RelationalFixupFunctions(CommentRepository commentRepository)
     {
-        _courseStoreRepository = courseStoreRepository;
+        _commentRepository = commentRepository;
     }
 
     public void Run()
     {
-        var withRelationalFixup = _courseStoreRepository.GetCommentsByRelationalFixup(1);
-        var withAsNoTracking = _courseStoreRepository.GetCommentsByAsNoTracking(1);
+        var withRelationalFixup = _commentRepository.GetCommentsByRelationalFixup(1);
+        var withAsNoTracking = _commentRepository.GetCommentsByAsNoTracking(1);
     }
 }

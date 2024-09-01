@@ -21,3 +21,8 @@ to via a foreign key
 primary key
 
 ** An entity class can be both a principal and a dependent entity at the same time. **
+
+### What is the AsNoTracking
+
+**AsNoTracking:**
+**AsNoTrackingWithIdentityResolution:**
