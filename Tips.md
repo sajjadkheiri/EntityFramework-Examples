@@ -11,7 +11,6 @@ The Single (and SingleOrDefault) was fastest for a database access,
 and also better than using First, as Single will throw an exception if your Where
 clause returns more than one result. Single and
 
-
 ### Dependent and Principal entity?
 
 **Principal entity:** Contains a primary key that the dependent relationship refer
@@ -26,3 +25,25 @@ primary key
 
 **AsNoTracking:**
 **AsNoTrackingWithIdentityResolution:**
+
+### Constructor in EF
+
+If you want to use constructor in a entity, you just have to add parameters from
+added properties.
+
+**Note:** If you want to change the value of property, you have to obtain data from
+input constructor's parameter like
+
+```c#
+public class Person
+{
+    public Person(string firstName)
+    {
+        FirstName = $"Hello"+firstName;
+    }
+
+    public int Id { get; set; }
+    public int FirstName { get; set; }
+    public int LastName { get; set; }
+}
+```
