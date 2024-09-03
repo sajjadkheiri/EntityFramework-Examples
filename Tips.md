@@ -40,6 +40,7 @@ public class Person
     public Person(string firstName)
     {
         FirstName = $"Hello"+firstName;
+        LastName = "Kheiri"
     }
 
     public int Id { get; set; }
