@@ -2,13 +2,13 @@
 
 ### what's difference between Find() and FirstOrDefualt()?
 
-First of all, Find() tries to read from DbContex like a cache. If it could not be able to fetch data
-go to the database.However, FirstOrDefualt() directly go to the database without any cache
+First, Find() tries to read from DbContex like a cache. If it could not be able to fetch data
+go to the database. However, FirstOrDefualt() directly goes to the database without any cache
 
 ### what's difference between SingleOrDefualt() and FirstOrDefualt()?
 
-The Single (and SingleOrDefault) was fastest for a database access,
-and also better than using First, as Single will throw an exception if your Where
+The Single (and SingleOrDefault) was fastest for database access
+and better than using First, as Single will throw an exception if your Where
 clause returns more than one result. Single and
 
 ### Dependent and Principal entity?
@@ -26,12 +26,12 @@ primary key
 **AsNoTracking:**
 **AsNoTrackingWithIdentityResolution:**
 
-### Constructor in EF
+### Constructor in EF  
 
-If you want to use constructor in a entity, you just have to add parameters from
+If you want to use a constructor in an entity, you just have to add parameters from
 added properties.
 
-**Note:** If you want to change the value of property, you have to obtain data from
+**Note:** If you want to change the value of the property, you have to obtain data from
 input constructor's parameter like
 
 ```c#
