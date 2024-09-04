@@ -6,7 +6,6 @@ First, Find() tries to read from DbContex like a cache. If it could not be able 
 go to the database. However, FirstOrDefualt() directly goes to the database without any cache
 
 <br />
-<br />
 
 ### what's difference between SingleOrDefualt() and FirstOrDefualt()?
 
@@ -14,7 +13,6 @@ The Single (and SingleOrDefault) was fastest for database access
 and better than using First, as Single will throw an exception if your Where
 clause returns more than one result. Single and
 
-<br />
 <br />
 
 ### Dependent and Principal entity?
@@ -28,14 +26,12 @@ primary key
 ** An entity class can be both a principal and a dependent entity at the same time. **
 
 <br />
-<br />
 
 ### What is the AsNoTracking
 
 **AsNoTracking:**
 **AsNoTrackingWithIdentityResolution:**
 
-<br />
 <br />
 
 ### Constructor in EF
@@ -46,6 +42,8 @@ added properties.
 > [!Note]
 > If you want to change the value of the property, you have to obtain data from
 > input constructor's parameter like
+
+<br />
 
 ```c#
 public class Person
@@ -62,7 +60,6 @@ public class Person
 }
 ```
 
-<br />
 <br />
 
 ### Three ways of configuring EF :
@@ -87,10 +84,14 @@ known as the Fluent API, to provide extra information to EF Core in its modeling
 stage. The Fluent API is the most comprehensive form of configuration
 information, and some features are available only via that API.
 
+<br />
+
 > [!Note]
 > Most real applications need to use all three approaches to configure
 > EF Core and the database in exactly the way they need. Some configuration
 > features are available via two or even all three approaches
+
+<br />
 
 ### Convention for entity classes:
 
@@ -100,7 +101,6 @@ EF Core requires entity classes to have the following features:
 - The class can’t be a static class, as EF Core must be able to create a new instance of the class.
 - The class must have a constructor that EF Core can use.
 
-<br />
 <br />
 
 ### Convention for Properties in an entity class:
@@ -113,7 +113,6 @@ public getter and a setter of any access mode
 > However,in this case,By convention approach wont work.
 
 <br />
-<br />
 
 ### Configuring data annotation
 
@@ -122,13 +121,14 @@ features. These attributes can be applied to an entity class or property and pro
 configuration information to EF Core.
 
 <br />
-<br />
 
 ### Excluding propertise and class from the database
 
 - **NotMapped attribute:**
 
 EF Core will exclude a property or a class that has a NotMapped data attribute applied to it.
+
+<br />
 
 ```c#
 [NotMapped]
@@ -144,9 +144,13 @@ public class Person
 }
 ```
 
+<br />
+
 - **Ignore:**
 
 you can exclude properties and classes by using the Fluent API configuration command Ignore().
+
+<br />
 
 ```c#
 public class ConfigContext : DbContext
@@ -164,17 +168,21 @@ public class ConfigContext : DbContext
 }
 ```
 
+<br />
+
 > [!Tip]
 > Instead of configuring at OnModelCreating() method, you should have a configuration class peer each
 > entity and inherited from **IEntityTypeConfiguration**. Eventually, implement all related configuration
 > in that class. Furthermore, you must initiate at OnModelCreating() in DbContext.
+
+<br />
 
 ```c#
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         // Intial configuration peer each config class
         modelBuilder.ApplyConfiguration(new PersonConfig());
-        
+
         // Intial configuration peer assembly
         modelBuilder.ApplyConfigurationsFromAssembly(typeof(PersonConfig).Assembly);
     }
