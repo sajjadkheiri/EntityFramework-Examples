@@ -178,6 +178,21 @@ public class ConfigContext : DbContext
 <br />
 
 ```c#
+public class PersonConfig : IEntityTypeConfiguration<Person>
+{
+    public void Configure(EntityTypeBuilder<Person> builder)
+    {
+        builder.Ignore(x => x.Contacts);
+        builder.Property(x => x.FirstName).HasMaxLength(50);
+    }
+}
+```
+
+```c#
+public class ConfigContext : DbContext
+{
+    public DbSet<Person> People { get; set; }
+    
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         // Intial configuration peer each config class
@@ -186,4 +201,5 @@ public class ConfigContext : DbContext
         // Intial configuration peer assembly
         modelBuilder.ApplyConfigurationsFromAssembly(typeof(PersonConfig).Assembly);
     }
+}    
 ```
