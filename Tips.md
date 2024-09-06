@@ -203,3 +203,20 @@ public class ConfigContext : DbContext
     }
 }    
 ```
+
+<br />
+
+### Setting database column type, size, and nullability
+
+* **[IsRequired] / IsRequired**
+
+* **[MaxLength(5)] / HasMaxLength(5)**
+
+* **[Column(TypeName = "")]**
+
+* **[Unicode()] / IsUnicode()**
+
+* **UseCollation()**
+
+* **[Precision(14,4)] / HasPrecision(14,4) :**
+Sets the number of digits and how many of the digits are after the decimal point
