@@ -13,7 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EF.Entity", "EF.Course\EF.E
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EF.UI", "EF.Course\EF.UI\EF.UI.csproj", "{9C6BC8F1-C779-411E-B238-9E840B41B4E8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EF.ConfigurationSample", "EF.ConfigurationSample\EF.ConfigurationSample.csproj", "{C3EA2DE1-BE19-473A-82B2-4C9284B8126A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EF.ConfigurationSample", "EF.ConfigurationSample\EF.ConfigurationSample.csproj", "{C3EA2DE1-BE19-473A-82B2-4C9284B8126A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EF.ShadowPropertySample", "EF.ShadowPropertySample\EF.ShadowPropertySample.csproj", "{C9DA9ECD-6756-417D-84E8-1C93A54293A6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +43,10 @@ Global
 		{C3EA2DE1-BE19-473A-82B2-4C9284B8126A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C3EA2DE1-BE19-473A-82B2-4C9284B8126A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C3EA2DE1-BE19-473A-82B2-4C9284B8126A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9DA9ECD-6756-417D-84E8-1C93A54293A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9DA9ECD-6756-417D-84E8-1C93A54293A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9DA9ECD-6756-417D-84E8-1C93A54293A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9DA9ECD-6756-417D-84E8-1C93A54293A6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

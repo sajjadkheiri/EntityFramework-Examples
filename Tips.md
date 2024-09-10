@@ -220,3 +220,87 @@ public class ConfigContext : DbContext
 
 * **[Precision(14,4)] / HasPrecision(14,4) :**
 Sets the number of digits and how many of the digits are after the decimal point
+
+<br />
+
+### Shadow Properties in EF Core
+Shadow properties in Entity Framework Core are properties that are not defined in your .NET entity class but are defined in the EF Core model. These properties are mapped to database columns and can be used to store and retrieve values without explicitly declaring them in your class model.
+####  Definition:
+Configured in the EF Core model, typically in the `Configure` method of your entity configuration class:
+
+<br />
+
+```c#
+
+internal class PersonConfig : IEntityTypeConfiguration<Person>
+{
+    public void Configure(EntityTypeBuilder<Person> builder)
+    {
+        builder.Property<DateTime>("CreatedDateTime");
+        builder.Property<DateTime>("EditDateTime");
+    }
+}
+
+```
+
+<br />
+
+####  Usage:
+Useful for storing metadata or audit information (like timestamp) without cluttering your entity classes. This method ensures that every time an entity is added or modified, the `CreatedDateTime` or `EditDateTime` properties are automatically updated with the current timestamp. This is useful for maintaining audit trails in your database.
+
+<br />
+
+```c#
+
+    public override Task<int> SaveChangesAsync(bool acceptAllChangesOnSuccess, CancellationToken cancellationToken = default(CancellationToken))
+    {
+        var AddedEntities = ChangeTracker.Entries().Where(E => E.State == EntityState.Added).ToList();
+
+        AddedEntities.ForEach(E =>
+        {
+            E.Property("CreatedDateTime").CurrentValue = DateTime.Now;
+        });
+
+        var EditedEntities = ChangeTracker.Entries().Where(E => E.State == EntityState.Modified).ToList();
+
+        EditedEntities.ForEach(E =>
+        {
+            E.Property("EditDateTime").CurrentValue = DateTime.Now;
+        });
+
+        return base.SaveChangesAsync(acceptAllChangesOnSuccess, cancellationToken);
+    }
+
+```
+
+<br />
+
+####  Access:
+Shadow properties using the `ChangeTracker` API. 
+<br />
+
+> [!Tip]
+> Shadow properties can be referenced in LINQ queries via the `EF.Property` static method.
+<br />
+
+
+```c#
+
+internal class ShadowPropertyUsage
+    {
+        private readonly ShadowPropertyContext _context;
+
+        public ShadowPropertyUsage(ShadowPropertyContext context)
+        {
+            _context = context;
+        }
+
+        public Person GetLatestPerson()
+        {
+            return _context.People.OrderBy(contact => Property<DateTime>(contact, "CreatedDateTime")).FirstOrDefault();
+        }
+    }
+
+```
+
+<br />
