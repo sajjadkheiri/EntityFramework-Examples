@@ -304,3 +304,17 @@ internal class ShadowPropertyUsage
 ```
 
 <br />
+
+### Value Conversion
+
+- **Default converter:**
+
+```c#
+
+```
+
+- **Establish converter:**
+
+```c#
+
+```
