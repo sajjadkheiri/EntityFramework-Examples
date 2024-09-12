@@ -192,7 +192,7 @@ public class PersonConfig : IEntityTypeConfiguration<Person>
 public class ConfigContext : DbContext
 {
     public DbSet<Person> People { get; set; }
-    
+
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         // Intial configuration peer each config class
@@ -201,31 +201,34 @@ public class ConfigContext : DbContext
         // Intial configuration peer assembly
         modelBuilder.ApplyConfigurationsFromAssembly(typeof(PersonConfig).Assembly);
     }
-}    
+}
 ```
 
 <br />
 
 ### Setting database column type, size, and nullability
 
-* **[IsRequired] / IsRequired**
+- **[IsRequired] / IsRequired**
 
-* **[MaxLength(5)] / HasMaxLength(5)**
+- **[MaxLength(5)] / HasMaxLength(5)**
 
-* **[Column(TypeName = "")]**
+- **[Column(TypeName = "")]**
 
-* **[Unicode()] / IsUnicode()**
+- **[Unicode()] / IsUnicode()**
 
-* **UseCollation()**
+- **UseCollation()**
 
-* **[Precision(14,4)] / HasPrecision(14,4) :**
-Sets the number of digits and how many of the digits are after the decimal point
+- **[Precision(14,4)] / HasPrecision(14,4) :**
+  Sets the number of digits and how many of the digits are after the decimal point
 
 <br />
 
 ### Shadow Properties in EF Core
+
 Shadow properties in Entity Framework Core are properties that are not defined in your .NET entity class but are defined in the EF Core model. These properties are mapped to database columns and can be used to store and retrieve values without explicitly declaring them in your class model.
-####  Definition:
+
+#### Definition:
+
 Configured in the EF Core model, typically in the `Configure` method of your entity configuration class:
 
 <br />
@@ -245,7 +248,8 @@ internal class PersonConfig : IEntityTypeConfiguration<Person>
 
 <br />
 
-####  Usage:
+#### Usage:
+
 Useful for storing metadata or audit information (like timestamp) without cluttering your entity classes. This method ensures that every time an entity is added or modified, the `CreatedDateTime` or `EditDateTime` properties are automatically updated with the current timestamp. This is useful for maintaining audit trails in your database.
 
 <br />
@@ -275,14 +279,14 @@ Useful for storing metadata or audit information (like timestamp) without clutte
 
 <br />
 
-####  Access:
-Shadow properties using the `ChangeTracker` API. 
+#### Access:
+
+Shadow properties using the `ChangeTracker` API.
 <br />
 
 > [!Tip]
 > Shadow properties can be referenced in LINQ queries via the `EF.Property` static method.
-<br />
-
+> <br />
 
 ```c#
 
@@ -326,9 +330,9 @@ public class EmployeeConfig : IEntityTypeConfiguration<Employee>
     {
         // Convert Enumt to string
         builder.Property(x => x.EmployeeType).HasConversion<string>();
-        
+
         //OR
-        
+
         // Convert String to int
         builder.Property(x => x.Age).HasConversion(e => e.ToString(), e => int.Parse(e));
     }
@@ -342,6 +346,37 @@ public class EmployeeConfig : IEntityTypeConfiguration<Employee>
 {
     public EmployeeTypeEnumToStringConverter() : base(x => x.ToString(), c => (EmployeeTypeEnum)int.Parse(c))
     {
+    }
+}
+```
+
+### Primary key:
+
+- [Key]
+- HasKey():
+
+```c#
+public class PrimaryKeyConfig : IEntityTypeConfiguration<PrimaryKey>
+{
+    public void Configure(EntityTypeBuilder<PrimaryKey> builder)
+    {
+        builder.HasKey(x=> new {c.Key1,Key2});
+    }
+}
+```
+
+### Read-only attribute:
+
+- [KeyLess]
+
+- HasNoKey():
+
+```c#
+public class ReadOnlyFluentConfig : IEntityTypeConfiguration<ReadOnlyFluent>
+{
+    public void Configure(EntityTypeBuilder<ReadOnlyFluent> builder)
+    {
+        builder.Entity<ReadOnlyFluent>().HasNoKey();
     }
 }
 ```
