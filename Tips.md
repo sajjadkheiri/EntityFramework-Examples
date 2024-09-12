@@ -305,16 +305,43 @@ internal class ShadowPropertyUsage
 
 <br />
 
-### Value Conversion
+### Value Conversion:
+
+value conversions allows you to change data when reading and writing
+a property to the database. Typical uses are
+
+- Saving Enum type properties as a string (instead of a number)
+
+- Fixing the problem of DateTime losing its UTC (Coordinated Universal Time)
+  setting when read back from the database
+
+- Encrypting a property written to the database and decrypting on reading back
 
 - **Default converter:**
 
 ```c#
-
+public class EmployeeConfig : IEntityTypeConfiguration<Employee>
+{
+    public void Configure(EntityTypeBuilder<Employee> builder)
+    {
+        // Convert Enumt to string
+        builder.Property(x => x.EmployeeType).HasConversion<string>();
+        
+        //OR
+        
+        // Convert String to int
+        builder.Property(x => x.Age).HasConversion(e => e.ToString(), e => int.Parse(e));
+    }
+}
 ```
 
 - **Establish converter:**
 
 ```c#
-
+ public class EmployeeTypeEnumToStringConverter : ValueConverter<EmployeeTypeEnum, string>
+{
+    public EmployeeTypeEnumToStringConverter() : base(x => x.ToString(), c => (EmployeeTypeEnum)int.Parse(c))
+    {
+    }
+}
 ```
