@@ -382,3 +382,27 @@ public class ReadOnlyFluentConfig : IEntityTypeConfiguration<ReadOnlyFluent>
 ```
 
 ### Index
+
+- [Index]:
+
+```c#
+[Index(nameof(Name), IsUnique = true, Name = "IX_Name_DataAnnotation")]
+public class DataAnnotationIndex
+{
+    public int Id { get; set; }
+    public string Name { get; set; }
+    public string Description { get; set; }
+}
+```
+
+- HasIndex():
+
+```c#
+public class FluentApiIndexConfig : IEntityTypeConfiguration<FluentApiIndex>
+{
+    public void Configure(EntityTypeBuilder<FluentApiIndex> builder)
+    {
+        modelBuilder.Entity<FluentApiIndex>().HasIndex(x => x.Name).IsUnique();
+    }
+}
+```
