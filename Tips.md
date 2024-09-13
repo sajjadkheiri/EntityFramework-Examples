@@ -350,6 +350,8 @@ public class EmployeeConfig : IEntityTypeConfiguration<Employee>
 }
 ```
 
+<br />
+
 ### Primary key:
 
 - [Key]
@@ -364,6 +366,8 @@ public class PrimaryKeyConfig : IEntityTypeConfiguration<PrimaryKey>
     }
 }
 ```
+
+<br />
 
 ### Read-only attribute:
 
@@ -380,6 +384,8 @@ public class ReadOnlyFluentConfig : IEntityTypeConfiguration<ReadOnlyFluent>
     }
 }
 ```
+
+<br />
 
 ### Index
 
@@ -406,3 +412,21 @@ public class FluentApiIndexConfig : IEntityTypeConfiguration<FluentApiIndex>
     }
 }
 ```
+
+<br />
+
+### Add new schema
+
+- .HasDefaultSchema();
+
+<br />
+
+### Naming
+
+- [Table()] / .ToTable():
+
+
+- [Column()] / .HasColumnName() :
+
+<br />
+
