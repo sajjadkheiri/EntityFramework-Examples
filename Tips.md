@@ -225,13 +225,8 @@ public class ConfigContext : DbContext
 
 ### Shadow Properties in EF Core
 
-Shadow properties in Entity Framework Core are properties that are not defined in your .NET entity class but are defined in the EF Core model. These properties are mapped to database columns and can be used to store and retrieve values without explicitly declaring them in your class model.
-
-#### Definition:
-
-Configured in the EF Core model, typically in the `Configure` method of your entity configuration class:
-
-<br />
+Shadow properties in Entity Framework Core are properties that are not defined in your .NET entity class but are defined in the EF Core model.
+These properties are mapped to database columns and can be used to store and retrieve values without explicitly declaring them in your class model.
 
 ```c#
 
@@ -250,7 +245,9 @@ internal class PersonConfig : IEntityTypeConfiguration<Person>
 
 #### Usage:
 
-Useful for storing metadata or audit information (like timestamp) without cluttering your entity classes. This method ensures that every time an entity is added or modified, the `CreatedDateTime` or `EditDateTime` properties are automatically updated with the current timestamp. This is useful for maintaining audit trails in your database.
+Useful for storing metadata or audit information (like timestamp) without cluttering your entity classes.
+This method ensures that every time an entity is added or modified, the `CreatedDateTime` or `EditDateTime`
+properties are automatically updated with the current timestamp. This is useful for maintaining audit trails in your database.
 
 <br />
 
@@ -430,3 +427,27 @@ public class FluentApiIndexConfig : IEntityTypeConfiguration<FluentApiIndex>
 
 <br />
 
+### How do we identify the name of the database provider:
+
+- .IsSqlServer() : 
+
+- .IsRelational():
+
+For example: 
+
+```c#
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        if(Database.IsSqlServer())
+        {
+            // 
+        }
+
+        if (Database.IsRelational())
+        {
+            // 
+        }
+    }
+```
+
+<br />
