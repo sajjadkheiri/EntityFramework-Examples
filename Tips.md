@@ -451,3 +451,17 @@ For example:
 ```
 
 <br />
+
+### Pre-convention model configuration:
+
+When you want to add a config for all of the database entity
+
+```c#
+public class NamingContext : DbContext
+{
+    protected override void ConfigureConventions(ModelConfigurationBuilder configurationBuilder)
+    {
+        configurationBuilder.Properties<string>().HaveMaxLength(200).AreUnicode(false);
+    }
+}
+```
