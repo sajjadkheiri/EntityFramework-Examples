@@ -465,3 +465,17 @@ public class NamingContext : DbContext
     }
 }
 ```
+
+### Navigation property
+
+### Relationship
+
+### OLTP
+
+### Memory optimization
+
+### Db context
+
+### Change tracker
+
+### Migration

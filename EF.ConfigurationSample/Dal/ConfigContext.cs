@@ -6,8 +6,8 @@ public class ConfigContext : DbContext
 {
     public DbSet<Person> People { get; set; }
     public DbSet<Teacher> Teachers { get; set; }
-    public DbSet<TypeAndNameWithDataAnnotation> typeAndNameWithDataAnnotations { get; set; }
-    public DbSet<TypeAndNameWithFluentApi> typeAndNameWithFluentApis { get; set; }
+    public DbSet<TypeAndNameWithDataAnnotation> TypeAndNameWithDataAnnotations { get; set; }
+    public DbSet<TypeAndNameWithFluentApi> TypeAndNameWithFluentApis { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
