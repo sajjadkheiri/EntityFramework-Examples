@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net9.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <RootNamespace>EF.Relationship.Application</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\EF.Relationship.Domain\EF.Relationship.Domain.csproj" />
+      <ProjectReference Include="..\EF.Relationship.Infrastructure\EF.Relationship.Infrastructure.csproj" />
+    </ItemGroup>
+
+</Project>
