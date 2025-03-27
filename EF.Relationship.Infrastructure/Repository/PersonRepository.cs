@@ -16,8 +16,12 @@ public class PersonRepository
         return _context.People.ToList();
     }
 
-    public int Add(Person person)
+    public async Task<int> Add(Person person)
     {
-        return _context.People.Add(person).Entity.Id;
+        _context.People.Add(person);
+        
+        await _context.SaveChangesAsync();
+        
+        return person.Id;
     }
 }

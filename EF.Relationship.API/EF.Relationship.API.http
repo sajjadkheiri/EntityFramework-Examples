@@ -1,6 +1,15 @@
 @EF.Relationship.API_HostAddress = http://localhost:5253
 
-GET {{EF.Relationship.API_HostAddress}}/weatherforecast/
+GET http://localhost:5253/Person
 Accept: application/json
 
 ###
+
+POST http://localhost:5253/Person
+Content-Type: application/json
+
+{
+    "FirstName": "Sajjad",
+    "LastName": "Kheiri",
+    "BirthDate": "1998-11-22"
+}

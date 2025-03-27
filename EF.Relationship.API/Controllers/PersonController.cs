@@ -15,15 +15,15 @@ public class PersonController : ControllerBase
         _personApplicationService = personApplicationService;
     }
 
-    [HttpGet(Name = "GetPeople")]
+    [HttpGet]
     public IEnumerable<PersonOutputDto> GetAll()
     {
         return _personApplicationService.GetAll();
     }
     
-    [HttpPost(Name = "AddPeople")]
-    public int Add(PersonInputDto input)
+    [HttpPost]
+    public async Task<int> Add(PersonInputDto input)
     {
-        return _personApplicationService.AddPerson(input);
+        return await _personApplicationService.AddPerson(input);
     }
 }

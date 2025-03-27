@@ -13,11 +13,11 @@ public class PersonApplicationService
         _personRepository = personRepository ?? throw new ArgumentNullException(nameof(personRepository));
     }
 
-    public int AddPerson(PersonInputDto input)
+    public async Task<int> AddPerson(PersonInputDto input)
     {
         ArgumentNullException.ThrowIfNull(input);
 
-        var response = _personRepository.Add(new Person
+        var response = await _personRepository.Add(new Person
             {
                 FirstName = input.FirstName,
                 LastName = input.LastName,

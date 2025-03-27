@@ -1,15 +1,16 @@
+using EF.Relationship.Application;
 using EF.Relationship.Infrastructure.Repository;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-
 builder.Services.AddControllers();
-// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
+
 builder.Services.AddDbContext<RelationshipDbContext>(option => option.UseSqlServer(builder.Configuration.GetSection("EFConnectionString").Value));
+
 builder.Services.AddScoped<PersonRepository>();
+builder.Services.AddScoped<PersonApplicationService>();
 
 var app = builder.Build();
 
