@@ -7,21 +7,31 @@ namespace EF.Relationship.Application;
 public class PersonApplicationService
 {
     private readonly PersonRepository _personRepository;
+    private readonly GroupRepository _groupRepository;
 
-    public PersonApplicationService(PersonRepository personRepository)
+    public PersonApplicationService(PersonRepository personRepository, GroupRepository groupRepository)
     {
         _personRepository = personRepository ?? throw new ArgumentNullException(nameof(personRepository));
+        _groupRepository = groupRepository ?? throw new ArgumentNullException(nameof(groupRepository));
     }
 
     public async Task<int> AddPerson(PersonInputDto input)
     {
         ArgumentNullException.ThrowIfNull(input);
 
+        var groups = _groupRepository.GetById(input.GroupId);
+
+        if (groups == null)
+        {
+            throw new ApplicationException($"Group with id {input.GroupId} not found");
+        }
+
         var response = await _personRepository.Add(new Person
             {
                 FirstName = input.FirstName,
                 LastName = input.LastName,
                 BirthDate = input.BirthDate,
+                GroupId = input.GroupId
             }
         );
 
@@ -41,9 +51,10 @@ public class PersonApplicationService
                 response.Add(new PersonOutputDto
                 {
                     Id = person.Id,
-                    FirstName = person.FirstName,
+                    GroupId = person.GroupId,
                     LastName = person.LastName,
-                    BirthDate = person.BirthDate
+                    FirstName = person.FirstName,
+                    BirthDate = person.BirthDate,
                 });
             }
         }

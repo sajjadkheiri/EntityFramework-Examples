@@ -9,4 +9,8 @@ public class RelationshipDbContext : DbContext
     {
     }
     public DbSet<Person> People { get; set; }
+    public DbSet<Group> Groups { get; set; }
+    public DbSet<Post> Posts { get; set; }
+    public DbSet<Tag> Tags { get; set; }
+    public DbSet<PostTag> PostTags { get; set; }
 }
